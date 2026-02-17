@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige Reservations | Edmonton Limousine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Modern reset to ensure a sleek, app-like experience without scrollbars */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+            background-color: #0d0d0d;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+        }
+
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* The specific green from your screenshot */
+        .accent-green {
+            color: #2e8444;
+        }
+        .bg-accent-green {
+            background-color: #2e8444;
+        }
+
+        /* Header Image Section */
+        .site-header {
+            flex-shrink: 0;
+            width: 100%;
+            position: relative;
+        }
+
+        .header-img {
+            width: 100%;
+            height: auto;
+            max-height: 20vh;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Gradient overlay to blend the header into the body */
+        .header-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, #0d0d0d);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 1rem 1rem 1rem;
+            background: #0d0d0d;
+            overflow: hidden;
+        }
+
+        /* Reservation Status Bar */
+        .status-bar {
+            text-align: center;
+            padding: 0.5rem 0 1.25rem 0;
+        }
+
+        .promo-text {
+            display: inline-block;
+            background: rgba(46, 132, 68, 0.15);
+            border: 1px solid rgba(46, 132, 68, 0.3);
+            color: #4ade80; /* Brighter green for readability on dark */
+            padding: 4px 16px;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Container for the iframe widget */
+        .widget-container {
+            flex-grow: 1;
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            border: 1px solid #2e8444; /* Subtle green border */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .footer-simple {
+            flex-shrink: 0;
+            padding: 0.75rem;
+            text-align: center;
+            color: #4b5563;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: #0a0a0a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Prestige Header -->
+        <header class="site-header">
+            <img src="https://i.postimg.cc/02PBPfJG/Screenshot-2026-02-17-134524.jpg" alt="Edmonton Prestige Limousine" class="header-img">
+            <div class="header-overlay"></div>
+        </header>
+
+        <!-- Main Booking Section -->
+        <main class="main-content">
+            <div class="status-bar">
+                <span class="promo-text">
+                    Book in less than 60 seconds!
+                </span>
+            </div>
+
+            <!-- EMBEDDED RESERVATION WIDGET -->
+            <div class="widget-container">
+                <iframe 
+                    src="https://app.gridops.ca/quote-widget/401f8df5-adad-4db0-b0dd-e2156aba536f" 
+                    title="Quote Widget">
+                </iframe>
+            </div>
+        </main>
+
+        <!-- Minimal Footer -->
+        <footer class="footer-simple">
+            &copy; 2024 Edmonton Prestige Limousine &bull; Professional Chauffeur Services
+        </footer>
+    </div>
+
+</body>
+</html>
